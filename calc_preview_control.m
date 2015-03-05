@@ -61,15 +61,12 @@ function [cog_x,cog_y,output_zmp_x,output_zmp_y] = calc_preview_control(foot_p_x
         x = A_d * x + B_d * ux+E_d * dx * sample_time;     %COG Trajectory(x)
         y = A_d * y + B_d * uy+E_d * dy * sample_time;     %COG Trajectory(y)
         
-<<<<<<< HEAD
-        cog_x(count) = x(1);       %重心軌道
+        cog_x(count) = x(1);       %ﾂ重ﾂ心窶ｹO窶慊ｹ
         cog_y(count) = y(1));
-        output_zmp_x(count) = px;  %出力ZMP
-=======
+        output_zmp_x(count) = px;  %ﾂ出窶氾校MP
         cog_x(count) = x(1);       %COG Trajectory
         cog_y(count) = y(1);
         output_zmp_x(count) = px;  %Output ZMP
->>>>>>> 08b1410b341e3f7bd5f9f1661463703b53a661fc
         output_zmp_y(count) = py;
     end
 end
