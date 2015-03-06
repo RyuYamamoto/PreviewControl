@@ -38,13 +38,6 @@ function Init_PreviewControl_Paramter()
     Q(1)=1e+8;      %重み係数(ZMPが理想系に近づくのは1e+8)
     H=1;            %重み係数
 
-    %リカッチ方程式の安定解とゲインKを求める
-    G_d=[-C_d*E_d;E_d];
-
-    Q=zeros(4,4);   
-    Q(1)=1e+8;     
-    H=1;   
-    
     %Riccati Equation
     [K,P]=dlqr(phi,G,Q,H);
     K=-(H+G'*P*G)^(-1)*G'*P*phi;
