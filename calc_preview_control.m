@@ -61,9 +61,6 @@ function [cog_x,cog_y,output_zmp_x,output_zmp_y] = calc_preview_control(foot_p_x
         x = A_d * x + B_d * ux+E_d * dx * sample_time;     %COG Trajectory(x)
         y = A_d * y + B_d * uy+E_d * dy * sample_time;     %COG Trajectory(y)
         
-        cog_x(count) = x(1);       %dS‹O“¹
-        cog_y(count) = y(1));
-        output_zmp_x(count) = px;  %o—ÍZMP
         cog_x(count) = x(1);       %COG Trajectory
         cog_y(count) = y(1);
         output_zmp_x(count) = px;  %Output ZMP
