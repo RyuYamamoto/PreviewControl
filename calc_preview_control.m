@@ -38,7 +38,6 @@ function [cog_x,cog_y,output_zmp_x,output_zmp_y] = calc_preview_control(foot_p_x
             j = j + 1;
             if (foot_p_x(count+j) - foot_p_x(count+j-1)) ~= 0
                 f  = -(H+G'*P*G)^(-1)*G'*(xi')^(j-1)*P*GR;         %ZMP feedforward term
-                fd = -(H+G'*P*G)^(-1)*(xi')^j*P*G_d;               %Disturbance feedforward term
                 dux = dux + f * (foot_p_x(count+j) - foot_p_x(count+j-1));  
             end
         end
@@ -50,7 +49,6 @@ function [cog_x,cog_y,output_zmp_x,output_zmp_y] = calc_preview_control(foot_p_x
             j = j + 1;
             if (foot_p_y(count+j) - foot_p_y(count+j-1)) ~= 0
                 f  = -(H+G'*P*G)^(-1)*G'*(xi')^(j-1)*P*GR;         %ZMP feedforward term
-                fd = -(H+G'*P*G)^(-1)*G'*(xi')^j*P*G_d;            %Disturbance feedforward term
                 duy = duy + f * (foot_p_y(count+j) - foot_p_y(count+j-1));
             end
         end
