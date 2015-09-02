@@ -22,10 +22,7 @@ function Init_PreviewControl_Paramter()
     [A_d,B_d,C_d,D_d]=ssdata(sys_d);    %状態空間モデルにアクセス(係数行列の取得)
 
     %エラーシステムの係数行列
-    E_d=[sample_time;1;0];              %Disturbance Matrix
-    sys=ss(A,B,C,D);                    %State Space Model
-    sys_d=c2d(sys,sample_time);         %Discretization
-    [A_d,B_d,C_d,D_d]=ssdata(sys_d);
+    E_d=[sample_time;1;0];
 
     %Error System
     ZERO=[0;0;0];
