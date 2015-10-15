@@ -21,15 +21,11 @@ function Init_PreviewControl_Paramter()
     sys_d=c2d(sys,sample_time);         %sample_timeで離散化
     [A_d,B_d,C_d,D_d]=ssdata(sys_d);    %状態空間モデルにアクセス(係数行列の取得)
 
-    %エラーシステムの係数行列
-    E_d=[sample_time;1;0];
-
     %Error System
     ZERO=[0;0;0];
     phi=[1 -C_d*A_d;ZERO A_d];
     G=[-C_d*B_d;B_d];
     GR=[1;ZERO];
-    G_d=[-C_d*E_d;E_d];                 %外乱予見制御に使用(歩行パターン生成には使用しない)
 
     Q=zeros(4,4);   %零行列
     Q(1)=1e+8;      %重み係数(ZMPが理想系に近づくのは1e+8)

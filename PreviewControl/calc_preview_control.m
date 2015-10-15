@@ -54,10 +54,8 @@ function [cog_x,cog_y,output_zmp_x,output_zmp_y] = calc_preview_control(foot_p_x
         end
         uy = uy + duy;      %Control input
         
-        dx=0;
-        dy=0;
-        x = A_d * x + B_d * ux+E_d * dx * sample_time;     %COG Trajectory(x)
-        y = A_d * y + B_d * uy+E_d * dy * sample_time;     %COG Trajectory(y)
+        x = A_d * x + B_d * ux;     %COG Trajectory(x)
+        y = A_d * y + B_d * uy;     %COG Trajectory(y)
         
         cog_x(count) = x(1);       %COG Trajectory
         cog_y(count) = y(1);
