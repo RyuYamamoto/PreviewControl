@@ -47,23 +47,6 @@ function walk_cmd(walk_patern)
                       4.5 0 max_zmp_y offset offset ;
                       4.75 0 max_zmp_y offset+up_leg_length offset ; 
                       5 0 0 offset offset ; 100 0 0 offset offset];
-%             zmp_p = [ 0 0 0 offset offset ;
-%                       0.5 0 max_zmp_y up_leg_length+offset offset ;
-%                       0.75 0 max_zmp_y up_leg_length+offset offset ;
-%                       1 0 min_zmp_y offset up_leg_length+offset ;
-%                       1.25 0 min_zmp_y offset up_leg_length+offset ;
-%                       1.5 0 max_zmp_y up_leg_length+offset offset ;
-%                       1.75 0 max_zmp_y up_leg_length+offset offset ;
-%                       2 0 min_zmp_y offset up_leg_length+offset ;
-%                       2.25 0 min_zmp_y offset up_leg_length+offset ;
-%                       2.5 0 max_zmp_y up_leg_length+offset offset ;
-%                       2.75 0 max_zmp_y up_leg_length+offset offset ;
-%                       3 0 min_zmp_y offset up_leg_length+offset ;
-%                       3.25 0 min_zmp_y offset up_leg_length+offset ;
-%                       3.5 0 max_zmp_y up_leg_length+offset offset ;
-%                       3.75 0 max_zmp_y up_leg_length+offset offset ;
-%                       4 0 0 offset offset ;
-%                       100 0 0 offset offset];
             motion_seq(zmp_p);
     end
 end
